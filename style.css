@@ -1,0 +1,220 @@
+/*basic reset*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(16, 57, 18);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding:1rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+
+}
+
+.container{
+    background-color: #c8e7c8;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+    padding: 2rem;
+    position:relative;
+    overflow: hidden;
+}   
+
+/*screens*/
+
+.screens{
+    display:none;
+    padding: 2rem;
+    text-align: center;
+
+}
+
+.screens.active{
+    display: block;
+}
+
+/*start screen*/
+
+#startscreen h1{
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+#startscreen p{
+    color: rgb(63, 63, 63);
+}
+
+.quizheader{
+    margin-bottom:2rem;
+}
+
+#questions{
+    size:2rem;
+    margin-bottom: 2.5rem;
+}
+
+#startbtn{
+    background-color: #7ec67e;
+    margin-top: 20px;
+    border-width: 2px;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#startbtn:hover{
+        background-color: #499849;
+}
+
+/* here '#' is used to get element by id and here '.' is used to get element by class name*/
+#info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color:rgb(63, 63, 63) ;
+    gap:15rem;
+}
+
+
+
+.answers{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.answerbtn{
+    background-color:#7ab87a;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    font-size: 20px;
+    border:2px solid rgb(68, 96, 69);
+    text-align: left;
+    cursor:pointer;
+    padding: 1rem;
+    transition: all 0.2s ease-in;
+}
+
+.answerbtn:hover{
+    background-color:#669a66 ;
+    border-color: rgb(40, 36, 36);
+}
+
+
+/*here u can see we have added .correct to the above answerbtn class name, this answerbtn class name is added in java script file.
+and when the answerbtn class is added to the class list we can add it to the class name under the  property of dataset which add a property to an element dynamically*/
+.answerbtn.correct{
+    background-color:rgb(75, 138, 13) ;
+    border-color: rgb(29, 45, 12);
+    color: rgb(31, 35, 31);
+}
+
+.answerbtn.incorrect{
+    background-color: rgb(178, 74, 74);
+    border-color: rgb(49, 30, 30);
+    color: rgb(25, 21, 21);
+}
+
+.progressbar{
+    height: 10px;
+    background-color:#a4c4a4;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+    border-color: black;
+
+}
+
+.progress{
+    height: 100%;
+    width:0%;
+    background-color:#2f5f2f  ;
+    transition: width 0.4s ease-out;
+}
+
+/*results screen*/
+
+#resultsscreen h2{
+    margin-bottom: 20px ;
+}
+
+.results{
+    background-color: #c8e7c8;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.resultsout{
+    background-color: #2f5f2f;
+    border-radius: 10px;
+    max-width: fit-content;
+    display:inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+}
+
+.results p{
+    font-size: 1.3rem;
+    color: rgb(224, 215, 215);
+    margin-bottom: 1.5 rem;
+}
+
+#resultmsg{
+    font-size: 1.5rem;
+    font: weight 600px;
+    margin-top: 1rem;
+    color: azure;
+}
+
+button{
+    background-color: #7ec67e;
+    margin-top: 10px;
+    border-width: 2px;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #499849;
+}
+
+
+
+@media(max-width:500px)
+{
+    
+  .screens {
+    padding: 1rem;
+  }
+
+  #startscreen h1 {
+    font-size: 2rem;
+  }
+
+  #questions {
+    font-size: 1.3rem;
+  }
+
+  .answerbtn {
+    padding: 12px;
+  }
+
+  button {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
